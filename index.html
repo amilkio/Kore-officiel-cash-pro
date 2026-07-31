@@ -85,23 +85,23 @@
 
 <script>
 function sendToWhatsApp() {
-    var nom = document.getElementById('nom').value;
-    var pays = document.getElementById('pays').value;
-    var whatsapp = document.getElementById('whatsapp').value;
-    var gmail = document.getElementById('gmail').value;
-    
-    var message = `Bonjour Leader Ousman, je viens de m'inscrire sur Kore Officiel Cash Pro%0A%0A`+
-                  `Nom: ${nom}%0A`+
-                  `Pays: ${pays}%0A`+
-                  `WhatsApp: ${whatsapp}%0A`+
-                  `Gmail: ${gmail}`;
-    
-    var url = `https://wa.me/22952681981?text=${message}`;
-    window.open(url, '_blank');
+  var nom = document.getElementById('nom').value;
+  var pays = document.getElementById('pays').value;
+  var whatsapp = document.getElementById('whatsapp').value;
+  var gmail = document.getElementById('gmail').value;
+
+  var message = `Bonjour Leader Ousman, je veux des infos%0A` +
+                `Nom: ${nom}%0A` +
+                `Pays: ${pays}%0A` +
+                `WhatsApp: ${whatsapp}%0A` +
+                `Gmail: ${gmail}`;
+
+  // Ouvre le 1er numéro
+window.open('https://wa.me/22952681981?text=' + encodeURIComponent(message), '_blank');
+
+// Ouvre le 2ᵉ numéro 1 seconde après
+setTimeout(() => {
+  window.open('https://wa.me/22943801175?text=' + encodeURIComponent(message), '_blank');
+}, 1000);
 }
 </script>
-
-</body>
-</html>
-
-
