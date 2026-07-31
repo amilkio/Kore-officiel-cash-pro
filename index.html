@@ -90,18 +90,13 @@ function sendToWhatsApp() {
   var whatsapp = document.getElementById('whatsapp').value;
   var gmail = document.getElementById('gmail').value;
 
-  var message = `Bonjour Leader Ousman, je veux des infos%0A` +
-                `Nom: ${nom}%0A` +
-                `Pays: ${pays}%0A` +
-                `WhatsApp: ${whatsapp}%0A` +
-                `Gmail: ${gmail}`;
+  var message = 'Bonjour Leader Ousman, je 
+                'Nom: ${nom}%0A' +
+                'Pays: ${pays}%0A' +
+                'WhatsApp: ${whatsapp}%0A' +
+                'Gmail: ${gmail}';
 
-  // Ouvre le 1er numéro
-window.open('https://wa.me/22952681981?text=' + encodeURIComponent(message), '_blank');
-
-// Ouvre le 2ᵉ numéro 1 seconde après
-setTimeout(() => {
-  window.open('https://wa.me/22943801175?text=' + encodeURIComponent(message), '_blank');
-}, 1000);
+  var url = 'https://wa.me/22952681981?text=
+  window.open(url, '_blank');
 }
-</script>
+       </script>
